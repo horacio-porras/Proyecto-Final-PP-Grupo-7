@@ -1,0 +1,801 @@
+fecha,sucursal,categoria,unidades,precio_unitario,descuento_pct,ventas_total
+2026-01-01,Heredia,Ropa,11,25.16,0.0,276.75
+2026-01-01,Cartago,Ropa,8,23.5,20.0,90.24
+2026-01-01,Cartago,Ropa,4,24.32,0.0,58.37
+2026-01-02,Heredia,Accesorios,9,11.58,0.0,104.2
+2026-01-02,Heredia,Calzado,6,58.46,20.0,280.63
+2026-01-02,Heredia,Accesorios,6,11.36,5.0,64.76
+2026-01-03,Cartago,Calzado,2,55.44,5.0,63.2
+2026-01-03,Alajuela,Calzado,13,55.94,5.0,759.97
+2026-01-03,San José,Accesorios,13,11.59,10.0,217.0
+2026-01-04,Alajuela,Accesorios,6,13.03,20.0,68.8
+2026-01-04,Heredia,Ropa,5,24.16,20.0,96.64
+2026-01-04,Alajuela,Calzado,5,53.09,0.0,291.98
+2026-01-05,Heredia,Ropa,7,25.96,10.0,163.57
+2026-01-05,Alajuela,Accesorios,11,11.97,20.0,115.88
+2026-01-05,Heredia,Calzado,13,57.47,0.0,747.15
+2026-01-06,San José,Ropa,12,23.26,20.0,357.34
+2026-01-06,San José,Calzado,10,51.13,,777.16
+2026-01-06,San José,Ropa,13,26.18,5.0,517.32
+2026-01-07,Cartago,Accesorios,1,11.73,0.0,7.04
+2026-01-07,Cartago,Ropa,3,26.79,10.0,43.39
+2026-01-07,San José,Accesorios,5,11.36,0.0,90.88
+2026-01-08,Alajuela,Accesorios,3,11.38,5.0,35.67
+2026-01-08,Heredia,Ropa,11,26.82,0.0,294.98
+2026-01-08,San José,Accesorios,7,11.67,10.0,117.61
+2026-01-09,Cartago,Calzado,4,50.71,5.0,115.61
+2026-01-09,Cartago,Accesorios,14,11.33,5.0,90.4
+2026-01-09,San José,Calzado,4,57.97,5.0,352.43
+2026-01-10,Heredia,Accesorios,9,11.44,20.0,82.35
+2026-01-10,Cartago,Accesorios,9,12.13,5.0,62.25
+2026-01-10,Heredia,Accesorios,9,12.8,5.0,109.47
+2026-01-11,Heredia,Calzado,12,56.21,20.0,539.66
+2026-01-11,Heredia,Calzado,5,57.78,20.0,231.12
+2026-01-11,Heredia,Ropa,7,27.38,10.0,172.52
+2026-01-12,Heredia,Accesorios,14,11.52,10.0,145.13
+2026-01-12,San José,Ropa,8,26.88,20.0,275.26
+2026-01-12,San José,Ropa,3,25.26,5.0,115.16
+2026-01-13,San José,Ropa,1,23.51,10.0,33.85
+2026-01-13,San José,Calzado,8,50.95,20.0,521.75
+2026-01-13,Heredia,Calzado,3,53.11,10.0,143.39
+2026-01-14,Cartago,Ropa,10,23.19,0.0,139.13
+2026-01-14,San José,Calzado,7,57.99,20.0,519.58
+2026-01-14,Heredia,Accesorios,12,12.14,20.0,116.52
+2026-01-15,Cartago,Calzado,1,49.99,10.0,26.99
+2026-01-15,Cartago,Accesorios,12,12.91,20.0,74.35
+2026-01-15,Heredia,Calzado,12,56.06,5.0,639.04
+2026-01-16,Cartago,Ropa,6,24.71,20.0,71.18
+2026-01-16,Cartago,Ropa,9,23.2,0.0,125.31
+2026-01-16,Alajuela,Accesorios,4,11.93,10.0,47.23
+2026-01-17,Alajuela,Calzado,8,59.59,5.0,498.18
+2026-01-17,Heredia,Accesorios,14,12.2,10.0,153.75
+2026-01-17,San José,Accesorios,1,11.9,20.0,15.23
+2026-01-18,Alajuela,Ropa,8,25.54,20.0,179.8
+2026-01-18,San José,Calzado,9,55.56,0.0,800.01
+2026-01-18,Heredia,Calzado,4,56.36,,214.17
+2026-01-19,San José,Ropa,3,23.49,20.0,90.22
+2026-01-19,Cartago,Calzado,2,51.14,20.0,49.09
+2026-01-19,San José,Calzado,2,49.64,5.0,150.9
+2026-01-20,Alajuela,Calzado,12,58.65,20.0,619.35
+2026-01-20,Cartago,Calzado,8,49.54,5.0,225.88
+2026-01-20,Heredia,Accesorios,12,11.41,20.0,109.58
+2026-01-21,San José,Ropa,7,25.43,10.0,256.3
+2026-01-21,Heredia,Accesorios,8,12.0,5.0,91.2
+2026-01-21,Cartago,Ropa,14,27.01,10.0,204.18
+2026-01-22,Cartago,Ropa,6,23.57,10.0,76.35
+2026-01-22,Heredia,Calzado,8,50.75,5.0,385.73
+2026-01-22,San José,Calzado,10,51.26,0.0,820.23
+2026-01-23,San José,Ropa,9,24.99,0.0,359.84
+2026-01-23,Cartago,Calzado,14,52.7,0.0,442.71
+2026-01-23,San José,Accesorios,12,11.89,20.0,182.68
+2026-01-24,San José,Ropa,9,25.94,0.0,373.53
+2026-01-24,Heredia,Accesorios,8,11.57,0.0,92.57
+2026-01-24,San José,Ropa,12,25.83,10.0,446.27
+2026-01-25,Heredia,Accesorios,11,10.85,10.0,107.39
+2026-01-25,Cartago,Calzado,13,55.51,5.0,411.31
+2026-01-25,San José,Calzado,14,59.48,5.0,1265.75
+2026-01-26,Alajuela,Ropa,11,27.17,20.0,263.01
+2026-01-26,San José,Calzado,3,55.79,5.0,254.4
+2026-01-26,Alajuela,Ropa,7,27.42,0.0,211.1
+2026-01-27,Heredia,Ropa,1,23.68,20.0,18.94
+2026-01-27,Heredia,Accesorios,3,11.51,0.0,34.54
+2026-01-27,Cartago,Accesorios,3,11.88,20.0,17.1
+2026-01-28,San José,Accesorios,10,12.02,20.0,153.87
+2026-01-28,Cartago,Calzado,6,58.51,10.0,189.59
+2026-01-28,Cartago,Calzado,12,54.42,5.0,372.24
+2026-01-29,Alajuela,Accesorios,9,10.92,20.0,86.45
+2026-01-29,Heredia,Calzado,14,57.2,0.0,800.78
+2026-01-29,San José,Accesorios,1,11.33,0.0,18.14
+2026-01-30,Heredia,Accesorios,3,12.92,20.0,31.0
+2026-01-30,San José,Accesorios,12,11.31,5.0,206.27
+2026-01-30,Alajuela,Accesorios,2,11.51,0.0,25.32
+2026-01-31,San José,Accesorios,4,11.13,10.0,64.11
+2026-01-31,Cartago,Calzado,9,52.83,20.0,228.22
+2026-01-31,Heredia,Calzado,6,56.11,20.0,269.33
+2026-02-01,Cartago,Ropa,12,23.84,5.0,163.04
+2026-02-01,Heredia,Ropa,2,22.74,20.0,36.39
+2026-02-01,Cartago,Accesorios,2,12.21,,11.72
+2026-02-02,Alajuela,Calzado,13,57.58,10.0,741.11
+2026-02-02,Cartago,Ropa,9,23.04,5.0,118.22
+2026-02-02,Cartago,Ropa,3,24.62,10.0,39.89
+2026-02-03,Cartago,Ropa,4,22.84,20.0,43.86
+2026-02-03,Heredia,Ropa,3,22.58,0.0,67.75
+2026-02-03,Alajuela,Calzado,14,53.62,5.0,784.46
+2026-02-04,San José,Ropa,5,23.93,10.0,172.31
+2026-02-04,Alajuela,Calzado,6,59.13,20.0,312.2
+2026-02-04,San José,Accesorios,14,10.83,5.0,230.51
+2026-02-05,Alajuela,Accesorios,2,12.35,5.0,25.81
+2026-02-05,Cartago,Accesorios,12,12.56,20.0,72.35
+2026-02-05,Alajuela,Ropa,11,24.59,5.0,282.6
+2026-02-06,San José,Accesorios,2,12.0,0.0,38.41
+2026-02-06,San José,Accesorios,5,11.39,10.0,82.03
+2026-02-06,San José,Ropa,13,23.76,0.0,494.25
+2026-02-07,Heredia,Calzado,6,50.08,10.0,270.45
+2026-02-07,San José,Calzado,11,59.46,5.0,994.22
+2026-02-07,Alajuela,Accesorios,2,10.87,10.0,21.52
+2026-02-08,Alajuela,Accesorios,11,11.13,5.0,127.93
+2026-02-08,Heredia,Calzado,5,57.47,10.0,258.6
+2026-02-08,Heredia,Calzado,4,54.53,0.0,218.13
+2026-02-09,Cartago,Ropa,2,25.06,5.0,28.57
+2026-02-09,Alajuela,Calzado,12,52.74,20.0,556.92
+2026-02-09,San José,Ropa,4,23.31,0.0,149.16
+2026-02-10,Cartago,Accesorios,9,12.72,20.0,54.94
+2026-02-10,San José,Calzado,9,50.86,10.0,659.17
+2026-02-10,Heredia,Calzado,6,52.75,5.0,300.7
+2026-02-11,Heredia,Calzado,5,57.77,10.0,259.97
+2026-02-11,Heredia,Calzado,1,52.78,5.0,50.14
+2026-02-11,San José,Calzado,10,59.96,10.0,863.49
+2026-02-12,Alajuela,Accesorios,7,11.22,0.0,86.4
+2026-02-12,Heredia,Ropa,13,25.14,5.0,310.45
+2026-02-12,Alajuela,Calzado,3,55.42,5.0,173.74
+2026-02-13,San José,Ropa,9,25.0,20.0,288.03
+2026-02-13,Alajuela,Accesorios,1,12.66,20.0,11.14
+2026-02-13,Alajuela,Calzado,1,50.01,5.0,52.26
+2026-02-14,Alajuela,Ropa,7,25.23,10.0,174.84
+2026-02-14,Heredia,Ropa,14,26.45,20.0,296.23
+2026-02-14,Cartago,Accesorios,10,10.92,5.0,62.25
+2026-02-15,Heredia,Accesorios,3,12.11,0.0,36.33
+2026-02-15,Alajuela,Ropa,13,24.7,20.0,282.61
+2026-02-15,Alajuela,Ropa,5,24.52,10.0,121.39
+2026-02-16,Heredia,Calzado,6,55.41,5.0,315.86
+2026-02-16,Cartago,Accesorios,8,12.3,20.0,47.23
+2026-02-16,Alajuela,Calzado,13,57.24,20.0,654.82
+2026-02-17,San José,Accesorios,9,12.96,0.0,186.56
+2026-02-17,San José,Accesorios,6,12.38,5.0,112.87
+2026-02-17,San José,Calzado,5,60.49,20.0,387.13
+2026-02-18,San José,Ropa,3,25.82,0.0,123.96
+2026-02-18,Cartago,Accesorios,7,11.45,5.0,45.67
+2026-02-18,Cartago,Calzado,14,51.12,10.0,386.46
+2026-02-19,San José,Calzado,9,50.28,0.0,724.03
+2026-02-19,Cartago,Ropa,6,23.84,5.0,81.54
+2026-02-19,San José,Calzado,7,50.81,5.0,540.62
+2026-02-20,Alajuela,Accesorios,3,12.44,0.0,41.05
+2026-02-20,Cartago,Accesorios,4,12.45,10.0,26.9
+2026-02-20,Heredia,Calzado,9,56.23,10.0,455.48
+2026-02-21,Heredia,Accesorios,6,11.72,5.0,66.8
+2026-02-21,San José,Accesorios,1,11.91,5.0,18.11
+2026-02-21,Heredia,Ropa,6,23.8,20.0,114.23
+2026-02-22,Heredia,Accesorios,8,13.0,5.0,98.84
+2026-02-22,Cartago,Accesorios,5,10.84,0.0,32.51
+2026-02-22,Heredia,Calzado,8,53.03,0.0,424.21
+2026-02-23,Cartago,Ropa,9,25.36,5.0,130.12
+2026-02-23,Alajuela,Accesorios,5,11.23,0.0,61.78
+2026-02-23,San José,Ropa,8,26.77,5.0,325.54
+2026-02-24,Alajuela,Ropa,5,24.9,5.0,130.11
+2026-02-24,Heredia,Calzado,6,53.58,5.0,305.38
+2026-02-24,San José,Ropa,8,22.81,10.0,262.82
+2026-02-25,Heredia,Ropa,10,23.91,5.0,227.11
+2026-02-25,Alajuela,Accesorios,2,12.22,,26.87
+2026-02-25,Alajuela,Calzado,12,52.59,0.0,694.23
+2026-02-26,Alajuela,Ropa,11,22.73,20.0,219.99
+2026-02-26,San José,Calzado,10,55.88,0.0,894.0
+2026-02-26,San José,Ropa,3,24.02,5.0,109.53
+2026-02-27,Heredia,Calzado,5,58.81,5.0,279.35
+2026-02-27,San José,Accesorios,11,12.46,20.0,175.44
+2026-02-27,San José,Accesorios,14,12.53,10.0,252.64
+2026-02-28,Heredia,Accesorios,14,12.94,10.0,163.0
+2026-02-28,Cartago,Accesorios,2,12.74,5.0,14.53
+2026-02-28,Cartago,Ropa,10,24.15,20.0,115.9
+2026-03-01,Alajuela,Calzado,12,55.76,10.0,662.42
+2026-03-01,San José,Accesorios,11,11.42,20.0,160.81
+2026-03-01,San José,Ropa,6,23.51,5.0,214.39
+2026-03-02,Cartago,Calzado,10,51.76,0.0,310.59
+2026-03-02,Alajuela,Calzado,6,50.72,5.0,318.02
+2026-03-02,Cartago,Ropa,2,23.7,20.0,22.75
+2026-03-03,Cartago,Ropa,12,23.62,0.0,170.09
+2026-03-03,Alajuela,Ropa,2,25.86,10.0,51.21
+2026-03-03,San José,Calzado,10,52.27,0.0,836.26
+2026-03-04,Cartago,Calzado,6,50.01,20.0,144.04
+2026-03-04,Alajuela,Accesorios,14,11.81,20.0,145.52
+2026-03-04,Alajuela,Accesorios,6,11.28,10.0,67.02
+2026-03-05,Heredia,Ropa,13,25.95,5.0,320.44
+2026-03-05,San José,Calzado,5,51.94,10.0,373.96
+2026-03-05,Alajuela,Accesorios,2,12.14,5.0,25.37
+2026-03-06,San José,Accesorios,6,11.22,10.0,96.96
+2026-03-06,San José,Accesorios,8,11.96,0.0,153.05
+2026-03-06,Cartago,Ropa,14,26.84,5.0,214.15
+2026-03-07,Heredia,Calzado,11,52.84,20.0,464.96
+2026-03-07,Cartago,Calzado,6,55.3,0.0,199.08
+2026-03-07,Cartago,Ropa,2,24.69,10.0,26.67
+2026-03-08,San José,Ropa,6,22.85,5.0,208.39
+2026-03-08,Alajuela,Calzado,8,49.73,10.0,393.84
+2026-03-08,Heredia,Ropa,7,26.71,10.0,168.29
+2026-03-09,Alajuela,Ropa,14,24.2,20.0,298.17
+2026-03-09,Cartago,Calzado,5,57.05,10.0,154.03
+2026-03-09,Cartago,Accesorios,4,11.79,0.0,28.3
+2026-03-10,Heredia,Accesorios,5,12.81,10.0,57.65
+2026-03-10,San José,Calzado,2,51.65,10.0,148.74
+2026-03-10,San José,Accesorios,2,11.96,5.0,36.36
+2026-03-11,Heredia,Ropa,5,25.24,0.0,126.21
+2026-03-11,Heredia,Calzado,4,58.23,20.0,186.33
+2026-03-11,Heredia,Accesorios,5,10.87,10.0,48.92
+2026-03-12,Alajuela,Calzado,11,53.49,5.0,614.83
+2026-03-12,Alajuela,Calzado,5,54.73,5.0,285.95
+2026-03-12,San José,Ropa,12,25.44,20.0,390.82
+2026-03-13,Cartago,Ropa,7,23.21,10.0,87.72
+2026-03-13,Cartago,Ropa,3,25.22,20.0,36.31
+2026-03-13,Heredia,Calzado,12,57.13,0.0,685.54
+2026-03-14,Heredia,Ropa,4,26.17,0.0,104.66
+2026-03-14,Heredia,Calzado,8,51.97,5.0,394.96
+2026-03-14,Heredia,Ropa,1,24.7,20.0,19.76
+2026-03-15,Alajuela,Accesorios,9,11.52,10.0,102.6
+2026-03-15,Alajuela,Accesorios,11,11.73,0.0,141.94
+2026-03-15,San José,Ropa,2,24.32,,62.25
+2026-03-16,San José,Accesorios,7,13.07,0.0,146.36
+2026-03-16,Alajuela,Calzado,1,49.65,5.0,51.88
+2026-03-16,San José,Accesorios,10,13.07,10.0,188.27
+2026-03-17,Cartago,Accesorios,14,10.88,0.0,91.39
+2026-03-17,San José,Accesorios,10,10.99,5.0,167.0
+2026-03-17,Heredia,Calzado,5,51.77,0.0,258.83
+2026-03-18,San José,Calzado,10,52.66,20.0,673.99
+2026-03-18,Cartago,Accesorios,14,12.86,10.0,97.21
+2026-03-18,Cartago,Calzado,8,58.75,0.0,282.01
+2026-03-19,Heredia,Ropa,5,27.17,20.0,108.69
+2026-03-19,Cartago,Calzado,3,53.79,20.0,77.45
+2026-03-19,San José,Calzado,9,49.67,0.0,715.31
+2026-03-20,Cartago,Ropa,14,25.63,10.0,193.76
+2026-03-20,Heredia,Ropa,10,27.0,5.0,256.46
+2026-03-20,Heredia,Calzado,13,50.68,5.0,625.92
+2026-03-21,San José,Accesorios,2,12.79,0.0,40.92
+2026-03-21,Alajuela,Calzado,2,49.52,0.0,108.94
+2026-03-21,San José,Calzado,1,57.56,20.0,73.67
+2026-03-22,Heredia,Ropa,13,24.97,5.0,308.34
+2026-03-22,Heredia,Ropa,7,27.04,0.0,189.29
+2026-03-22,Cartago,Ropa,9,26.87,20.0,116.1
+2026-03-23,Alajuela,Ropa,2,22.73,0.0,50.01
+2026-03-23,San José,Ropa,1,24.99,20.0,31.99
+2026-03-23,San José,Calzado,5,52.16,20.0,333.84
+2026-03-24,Heredia,Calzado,12,54.33,0.0,652.0
+2026-03-24,Cartago,Ropa,3,22.83,20.0,32.88
+2026-03-24,San José,Accesorios,12,11.67,10.0,201.58
+2026-03-25,Alajuela,Calzado,5,53.99,20.0,237.57
+2026-03-25,Heredia,Accesorios,11,10.81,10.0,107.01
+2026-03-25,Alajuela,Accesorios,7,11.94,0.0,91.93
+2026-03-26,Alajuela,Calzado,5,59.34,10.0,293.74
+2026-03-26,Alajuela,Ropa,5,22.8,5.0,119.15
+2026-03-26,Alajuela,Ropa,5,27.22,10.0,134.76
+2026-03-27,Cartago,Ropa,5,24.95,10.0,67.36
+2026-03-27,Heredia,Calzado,8,51.82,10.0,373.08
+2026-03-27,Cartago,Calzado,7,60.16,20.0,202.14
+2026-03-28,San José,Calzado,10,54.71,5.0,831.57
+2026-03-28,Cartago,Ropa,10,24.68,20.0,118.49
+2026-03-28,San José,Accesorios,6,11.7,0.0,112.35
+2026-03-29,Cartago,Accesorios,1,12.92,0.0,7.75
+2026-03-29,Cartago,Calzado,8,50.93,10.0,220.01
+2026-03-29,Heredia,Ropa,14,23.55,5.0,313.25
+2026-03-30,Alajuela,Ropa,13,23.92,10.0,307.8
+2026-03-30,Heredia,Accesorios,7,10.95,20.0,61.32
+2026-03-30,Cartago,Ropa,13,26.72,10.0,187.58
+2026-03-31,San José,Calzado,13,54.87,10.0,1027.26
+2026-03-31,Heredia,Accesorios,6,12.24,20.0,58.77
+2026-03-31,San José,Accesorios,1,12.93,10.0,18.61
+2026-04-01,Alajuela,Calzado,8,54.94,,386.79
+2026-04-01,Heredia,Accesorios,1,11.46,20.0,9.17
+2026-04-01,Cartago,Ropa,11,25.16,20.0,132.82
+2026-04-02,Alajuela,Ropa,2,25.0,20.0,44.0
+2026-04-02,Cartago,Calzado,3,52.79,0.0,95.02
+2026-04-02,Cartago,Accesorios,13,11.36,20.0,70.86
+2026-04-03,Alajuela,Ropa,8,24.29,20.0,170.99
+2026-04-03,San José,Accesorios,6,12.56,10.0,108.55
+2026-04-03,San José,Ropa,2,23.33,0.0,74.65
+2026-04-04,Alajuela,Calzado,12,60.46,5.0,758.13
+2026-04-04,Alajuela,Ropa,7,23.68,20.0,145.85
+2026-04-04,San José,Calzado,10,52.5,0.0,839.99
+2026-04-05,Cartago,Ropa,1,23.11,5.0,13.18
+2026-04-05,Alajuela,Ropa,2,24.46,0.0,53.81
+2026-04-05,Heredia,Ropa,10,24.36,20.0,194.87
+2026-04-06,Cartago,Ropa,6,25.91,10.0,83.95
+2026-04-06,Heredia,Ropa,11,26.98,0.0,296.78
+2026-04-06,Cartago,Accesorios,5,11.39,20.0,27.35
+2026-04-07,Heredia,Accesorios,4,12.74,0.0,50.97
+2026-04-07,Heredia,Accesorios,7,11.54,20.0,64.62
+2026-04-07,Alajuela,Ropa,2,24.53,10.0,48.58
+2026-04-08,Alajuela,Ropa,11,23.14,20.0,224.01
+2026-04-08,San José,Ropa,9,26.96,0.0,388.28
+2026-04-08,San José,Ropa,2,24.37,5.0,74.07
+2026-04-09,Alajuela,Ropa,14,26.0,0.0,400.47
+2026-04-09,San José,Calzado,13,49.79,5.0,983.87
+2026-04-09,Cartago,Ropa,10,25.99,20.0,124.73
+2026-04-10,Cartago,Calzado,7,51.99,0.0,218.36
+2026-04-10,Cartago,Calzado,7,54.47,20.0,183.01
+2026-04-10,Heredia,Calzado,6,56.91,10.0,307.32
+2026-04-11,San José,Ropa,9,23.35,0.0,336.29
+2026-04-11,Heredia,Accesorios,10,12.07,20.0,96.52
+2026-04-11,Alajuela,Ropa,13,26.68,5.0,362.43
+2026-04-12,Cartago,Accesorios,4,11.19,20.0,21.49
+2026-04-12,Heredia,Accesorios,12,11.92,5.0,135.91
+2026-04-12,San José,Accesorios,10,11.24,5.0,170.87
+2026-04-13,Alajuela,Calzado,10,51.08,0.0,561.84
+2026-04-13,Alajuela,Calzado,6,54.89,0.0,362.27
+2026-04-13,San José,Accesorios,14,11.9,10.0,239.82
+2026-04-14,Cartago,Accesorios,7,12.35,20.0,41.48
+2026-04-14,Alajuela,Accesorios,6,12.86,5.0,80.62
+2026-04-14,San José,Accesorios,3,12.5,20.0,47.98
+2026-04-15,Heredia,Ropa,6,24.18,20.0,116.07
+2026-04-15,Cartago,Ropa,3,24.93,20.0,35.9
+2026-04-15,Alajuela,Calzado,5,56.91,20.0,250.41
+2026-04-16,Cartago,Calzado,13,58.73,5.0,435.16
+2026-04-16,Heredia,Accesorios,11,12.44,0.0,136.82
+2026-04-16,Cartago,Ropa,9,25.01,5.0,128.32
+2026-04-17,Heredia,Ropa,14,23.17,20.0,259.47
+2026-04-17,Cartago,Accesorios,6,12.88,10.0,41.74
+2026-04-17,San José,Accesorios,6,11.48,10.0,99.15
+2026-04-18,Alajuela,Ropa,11,24.53,20.0,237.41
+2026-04-18,Heredia,Ropa,4,26.92,20.0,86.15
+2026-04-18,San José,Accesorios,13,11.3,0.0,234.99
+2026-04-19,San José,Calzado,1,59.55,20.0,76.23
+2026-04-19,Alajuela,Ropa,3,23.65,5.0,74.13
+2026-04-19,Alajuela,Calzado,8,50.46,20.0,355.23
+2026-04-20,Heredia,Calzado,14,55.15,0.0,772.1
+2026-04-20,Alajuela,Ropa,10,26.48,0.0,291.24
+2026-04-20,San José,Accesorios,1,11.77,0.0,18.83
+2026-04-21,Alajuela,Calzado,13,58.77,20.0,672.33
+2026-04-21,Heredia,Accesorios,9,11.75,0.0,105.76
+2026-04-21,Cartago,Ropa,6,26.58,10.0,86.1
+2026-04-22,Heredia,Accesorios,4,11.07,20.0,35.43
+2026-04-22,San José,Accesorios,3,11.48,5.0,52.35
+2026-04-22,Alajuela,Calzado,4,50.85,,201.36
+2026-04-23,Alajuela,Ropa,1,26.2,5.0,27.38
+2026-04-23,Cartago,Accesorios,7,11.93,5.0,47.59
+2026-04-23,Alajuela,Accesorios,6,12.37,5.0,77.58
+2026-04-24,San José,Ropa,9,23.69,5.0,324.11
+2026-04-24,Heredia,Ropa,11,26.17,0.0,287.91
+2026-04-24,Cartago,Ropa,7,27.46,5.0,109.58
+2026-04-25,Heredia,Ropa,7,22.9,5.0,152.25
+2026-04-25,Heredia,Accesorios,10,11.57,20.0,92.52
+2026-04-25,San José,Ropa,11,26.85,10.0,425.26
+2026-04-26,Alajuela,Accesorios,14,12.84,5.0,187.91
+2026-04-26,Heredia,Accesorios,8,12.89,5.0,97.99
+2026-04-26,San José,Accesorios,3,11.34,0.0,54.45
+2026-04-27,San José,Ropa,8,25.32,5.0,307.84
+2026-04-27,Alajuela,Calzado,4,50.45,10.0,199.77
+2026-04-27,Cartago,Ropa,7,24.66,20.0,82.84
+2026-04-28,Alajuela,Calzado,9,55.84,20.0,442.23
+2026-04-28,Cartago,Calzado,3,52.34,20.0,75.38
+2026-04-28,San José,Accesorios,6,11.81,0.0,113.41
+2026-04-29,Alajuela,Accesorios,1,11.68,10.0,11.56
+2026-04-29,Heredia,Calzado,5,50.43,20.0,201.72
+2026-04-29,San José,Accesorios,14,10.96,0.0,245.6
+2026-04-30,San José,Calzado,8,58.09,0.0,743.58
+2026-04-30,San José,Accesorios,8,10.81,20.0,110.66
+2026-04-30,Cartago,Accesorios,10,13.17,5.0,75.05
+2026-05-01,Cartago,Ropa,13,26.99,20.0,168.39
+2026-05-01,San José,Calzado,13,60.36,20.0,1004.39
+2026-05-01,Cartago,Calzado,1,58.14,,33.14
+2026-05-02,Alajuela,Accesorios,14,10.81,20.0,133.13
+2026-05-02,Alajuela,Accesorios,4,11.08,10.0,43.87
+2026-05-02,San José,Accesorios,12,11.56,0.0,222.04
+2026-05-03,Heredia,Ropa,2,23.41,10.0,42.13
+2026-05-03,Cartago,Accesorios,5,10.95,10.0,29.55
+2026-05-03,Alajuela,Ropa,5,27.08,10.0,134.07
+2026-05-04,Cartago,Accesorios,13,12.98,10.0,91.15
+2026-05-04,Cartago,Accesorios,6,12.64,5.0,43.23
+2026-05-04,Heredia,Accesorios,10,11.41,5.0,108.37
+2026-05-05,Alajuela,Accesorios,6,12.85,,84.78
+2026-05-05,San José,Accesorios,3,12.77,20.0,49.02
+2026-05-05,Cartago,Calzado,11,53.06,20.0,280.16
+2026-05-06,Alajuela,Calzado,14,50.9,10.0,705.53
+2026-05-06,Cartago,Ropa,12,23.18,5.0,158.54
+2026-05-06,San José,Calzado,4,54.0,0.0,345.59
+2026-05-07,San José,Ropa,12,26.66,20.0,409.51
+2026-05-07,Heredia,Accesorios,10,10.98,5.0,104.34
+2026-05-07,Alajuela,Calzado,7,54.23,20.0,334.04
+2026-05-08,Heredia,Accesorios,10,11.65,10.0,104.86
+2026-05-08,San José,Accesorios,9,12.94,0.0,186.36
+2026-05-08,Cartago,Calzado,13,51.18,10.0,359.3
+2026-05-09,Heredia,Accesorios,4,12.37,0.0,49.49
+2026-05-09,Heredia,Ropa,10,24.11,10.0,217.03
+2026-05-09,San José,Calzado,3,56.61,0.0,271.74
+2026-05-10,San José,Ropa,14,26.61,10.0,536.48
+2026-05-10,Heredia,Ropa,5,26.62,10.0,119.8
+2026-05-10,Cartago,Calzado,1,58.8,0.0,35.28
+2026-05-11,San José,Accesorios,11,11.5,5.0,192.32
+2026-05-11,Cartago,Accesorios,1,11.46,0.0,6.88
+2026-05-11,Heredia,Accesorios,3,11.09,20.0,26.63
+2026-05-12,Cartago,Accesorios,3,11.41,0.0,20.54
+2026-05-12,Cartago,Accesorios,5,11.09,5.0,31.6
+2026-05-12,Heredia,Calzado,9,58.12,10.0,470.8
+2026-05-13,Cartago,Ropa,9,22.74,5.0,116.64
+2026-05-13,Heredia,Calzado,6,51.61,5.0,294.17
+2026-05-13,San José,Accesorios,13,12.7,5.0,250.88
+2026-05-14,San José,Calzado,2,57.95,20.0,148.36
+2026-05-14,Cartago,Accesorios,3,13.14,10.0,21.28
+2026-05-14,Cartago,Ropa,3,24.42,20.0,35.16
+2026-05-15,San José,Calzado,3,50.0,20.0,191.99
+2026-05-15,Cartago,Ropa,9,26.54,0.0,143.32
+2026-05-15,San José,Accesorios,11,11.49,20.0,161.74
+2026-05-16,Heredia,Calzado,6,58.0,5.0,330.63
+2026-05-16,Heredia,Ropa,8,22.6,5.0,171.74
+2026-05-16,Alajuela,Calzado,11,49.88,5.0,573.4
+2026-05-17,Cartago,Calzado,12,56.08,10.0,363.39
+2026-05-17,San José,Accesorios,7,12.44,10.0,125.41
+2026-05-17,Heredia,Accesorios,11,12.15,0.0,133.64
+2026-05-18,Alajuela,Ropa,13,25.16,20.0,287.84
+2026-05-18,San José,Ropa,7,25.49,5.0,271.17
+2026-05-18,Cartago,Accesorios,11,11.11,10.0,66.02
+2026-05-19,Heredia,Calzado,10,50.2,5.0,476.9
+2026-05-19,Alajuela,Ropa,7,24.25,5.0,177.37
+2026-05-19,Heredia,Calzado,7,55.53,10.0,349.81
+2026-05-20,Alajuela,Calzado,6,52.24,10.0,310.29
+2026-05-20,San José,Accesorios,13,11.23,5.0,221.9
+2026-05-20,San José,Accesorios,3,11.87,5.0,54.13
+2026-05-21,Heredia,Accesorios,5,11.78,0.0,58.92
+2026-05-21,Alajuela,Ropa,5,23.84,10.0,118.03
+2026-05-21,Alajuela,Accesorios,3,13.02,0.0,42.98
+2026-05-22,Heredia,Accesorios,5,13.06,0.0,65.32
+2026-05-22,Alajuela,Calzado,10,50.01,5.0,522.65
+2026-05-22,Cartago,Accesorios,6,11.95,10.0,38.73
+2026-05-23,Alajuela,Calzado,3,52.12,0.0,171.98
+2026-05-23,Alajuela,Accesorios,3,11.61,5.0,36.39
+2026-05-23,Alajuela,Calzado,7,49.81,10.0,345.21
+2026-05-24,Cartago,Ropa,7,22.9,10.0,86.56
+2026-05-24,Heredia,Ropa,6,22.67,20.0,108.8
+2026-05-24,Cartago,Calzado,2,50.88,10.0,54.95
+2026-05-25,Alajuela,Accesorios,7,12.36,5.0,90.4
+2026-05-25,San José,Accesorios,13,10.99,10.0,205.7
+2026-05-25,Heredia,Accesorios,7,12.93,20.0,72.39
+2026-05-26,Cartago,Accesorios,8,12.73,10.0,54.98
+2026-05-26,Alajuela,Ropa,10,23.85,5.0,249.19
+2026-05-26,San José,Ropa,2,25.96,0.0,83.06
+2026-05-27,Heredia,Accesorios,8,13.08,5.0,99.44
+2026-05-27,Heredia,Ropa,5,23.08,20.0,92.32
+2026-05-27,Alajuela,Ropa,7,25.3,10.0,175.33
+2026-05-28,Heredia,Accesorios,4,11.92,10.0,42.9
+2026-05-28,San José,Ropa,2,24.05,0.0,76.97
+2026-05-28,Alajuela,Ropa,3,23.94,10.0,71.1
+2026-05-29,Heredia,Accesorios,9,11.01,10.0,89.16
+2026-05-29,Cartago,Ropa,7,25.74,5.0,102.68
+2026-05-29,Heredia,Accesorios,2,11.27,10.0,20.29
+2026-05-30,Cartago,Ropa,3,24.61,0.0,44.3
+2026-05-30,Alajuela,Ropa,11,27.14,,328.4
+2026-05-30,San José,Calzado,3,53.33,20.0,204.79
+2026-05-31,San José,Calzado,12,52.98,5.0,966.32
+2026-05-31,Heredia,Calzado,10,59.76,20.0,478.06
+2026-05-31,San José,Ropa,10,25.42,10.0,366.02
+2026-06-01,Alajuela,Accesorios,7,12.17,20.0,74.96
+2026-06-01,Alajuela,Ropa,3,23.61,10.0,70.13
+2026-06-01,San José,Accesorios,10,12.34,5.0,187.55
+2026-06-02,Heredia,Calzado,7,53.67,20.0,300.56
+2026-06-02,Alajuela,Ropa,7,25.22,20.0,155.35
+2026-06-02,Cartago,Calzado,10,53.87,20.0,258.6
+2026-06-03,Heredia,Accesorios,8,10.99,20.0,70.37
+2026-06-03,San José,Calzado,1,59.15,5.0,89.91
+2026-06-03,Heredia,Accesorios,5,12.46,10.0,56.07
+2026-06-04,Heredia,Ropa,9,27.29,20.0,196.5
+2026-06-04,Cartago,Accesorios,6,11.54,20.0,33.22
+2026-06-04,Cartago,Ropa,3,23.91,5.0,40.88
+2026-06-05,Heredia,Accesorios,7,11.13,20.0,62.3
+2026-06-05,San José,Ropa,5,24.03,10.0,173.01
+2026-06-05,Heredia,Calzado,5,53.08,0.0,265.38
+2026-06-06,Cartago,Accesorios,4,11.24,10.0,24.28
+2026-06-06,Heredia,Ropa,12,23.82,0.0,285.88
+2026-06-06,Alajuela,Accesorios,9,11.51,20.0,91.12
+2026-06-07,Cartago,Accesorios,4,12.86,5.0,29.32
+2026-06-07,Alajuela,Calzado,11,54.41,0.0,658.35
+2026-06-07,Heredia,Calzado,4,58.52,10.0,210.66
+2026-06-08,Heredia,Accesorios,4,10.92,0.0,43.68
+2026-06-08,San José,Calzado,5,51.57,10.0,371.33
+2026-06-08,Alajuela,Accesorios,14,13.09,20.0,161.23
+2026-06-09,Heredia,Accesorios,11,10.92,10.0,108.12
+2026-06-09,Alajuela,Calzado,9,50.26,5.0,472.73
+2026-06-09,San José,Accesorios,12,12.04,20.0,184.98
+2026-06-10,Cartago,Calzado,12,52.69,0.0,379.35
+2026-06-10,Heredia,Accesorios,8,11.27,20.0,72.1
+2026-06-10,Alajuela,Calzado,13,56.2,10.0,723.24
+2026-06-11,Heredia,Calzado,6,56.2,0.0,337.2
+2026-06-11,San José,Calzado,6,51.57,20.0,396.05
+2026-06-11,Alajuela,Calzado,10,55.43,5.0,579.24
+2026-06-12,Cartago,Calzado,14,54.5,20.0,366.26
+2026-06-12,San José,Accesorios,12,12.83,20.0,197.09
+2026-06-12,San José,Ropa,14,22.84,0.0,511.67
+2026-06-13,Heredia,Calzado,4,52.06,20.0,166.61
+2026-06-13,Cartago,Calzado,7,55.72,10.0,210.6
+2026-06-13,Alajuela,Ropa,10,22.67,0.0,249.34
+2026-06-14,San José,Accesorios,14,12.83,5.0,273.02
+2026-06-14,Heredia,Accesorios,10,13.12,10.0,118.11
+2026-06-14,Alajuela,Calzado,13,53.11,0.0,759.49
+2026-06-15,Alajuela,Accesorios,6,12.66,0.0,83.55
+2026-06-15,San José,Ropa,9,23.75,5.0,324.84
+2026-06-15,Cartago,Accesorios,3,13.08,10.0,21.18
+2026-06-16,Alajuela,Calzado,4,51.83,20.0,182.44
+2026-06-16,San José,Ropa,9,22.53,20.0,259.54
+2026-06-16,Heredia,Accesorios,4,10.96,20.0,35.08
+2026-06-17,Heredia,Ropa,3,24.79,0.0,74.38
+2026-06-17,Alajuela,Accesorios,2,10.89,10.0,21.57
+2026-06-17,Alajuela,Accesorios,6,13.15,20.0,69.45
+2026-06-18,Cartago,Accesorios,4,12.31,10.0,26.6
+2026-06-18,Cartago,Accesorios,8,12.17,5.0,55.47
+2026-06-18,San José,Accesorios,9,12.3,0.0,177.16
+2026-06-19,Cartago,Ropa,14,24.59,20.0,165.25
+2026-06-19,Heredia,Accesorios,9,12.93,5.0,110.52
+2026-06-19,Alajuela,Calzado,3,57.34,20.0,151.38
+2026-06-20,San José,Calzado,6,54.23,10.0,468.58
+2026-06-20,Cartago,Ropa,2,23.92,0.0,28.7
+2026-06-20,Cartago,Calzado,8,51.09,0.0,245.22
+2026-06-21,Cartago,Calzado,8,52.97,10.0,228.82
+2026-06-21,Alajuela,Ropa,12,24.27,5.0,304.29
+2026-06-21,Alajuela,Accesorios,14,10.99,20.0,135.43
+2026-06-22,Heredia,Accesorios,14,13.02,5.0,173.16
+2026-06-22,Heredia,Calzado,1,52.34,5.0,49.72
+2026-06-22,Heredia,Ropa,1,25.2,5.0,23.94
+2026-06-23,San José,Accesorios,9,10.96,10.0,142.02
+2026-06-23,Heredia,Calzado,14,55.57,0.0,778.01
+2026-06-23,Heredia,Accesorios,1,12.35,5.0,11.73
+2026-06-24,Cartago,Accesorios,12,10.99,20.0,63.31
+2026-06-24,Cartago,Ropa,8,27.38,0.0,131.41
+2026-06-24,Alajuela,Calzado,8,51.29,5.0,428.82
+2026-06-25,Alajuela,Accesorios,2,11.43,5.0,23.89
+2026-06-25,Cartago,Ropa,7,26.18,5.0,104.47
+2026-06-25,Cartago,Calzado,10,53.2,,303.26
+2026-06-26,Heredia,Ropa,10,26.88,0.0,268.84
+2026-06-26,Heredia,Ropa,6,23.69,20.0,113.72
+2026-06-26,Heredia,Accesorios,10,11.55,20.0,92.43
+2026-06-27,Alajuela,Calzado,10,57.12,0.0,628.27
+2026-06-27,Alajuela,Accesorios,11,12.86,20.0,124.52
+2026-06-27,Heredia,Calzado,4,59.22,5.0,225.04
+2026-06-28,Cartago,Accesorios,14,11.49,20.0,77.22
+2026-06-28,San José,Accesorios,2,12.07,5.0,36.71
+2026-06-28,San José,Accesorios,1,11.79,5.0,17.91
+2026-06-29,Cartago,Accesorios,3,12.42,10.0,20.12
+2026-06-29,Heredia,Ropa,1,23.64,5.0,22.46
+2026-06-29,Heredia,Ropa,4,26.7,20.0,85.43
+2026-06-30,Alajuela,Accesorios,8,12.51,20.0,88.08
+2026-06-30,San José,Ropa,3,23.37,10.0,100.98
+2026-06-30,Cartago,Ropa,5,24.07,,64.99
+2026-07-01,Cartago,Accesorios,3,11.61,20.0,16.71
+2026-07-01,Heredia,Ropa,13,27.15,20.0,282.36
+2026-07-01,Cartago,Calzado,8,54.52,0.0,261.68
+2026-07-02,San José,Ropa,9,25.58,0.0,368.37
+2026-07-02,Alajuela,Calzado,7,59.74,10.0,413.98
+2026-07-02,Alajuela,Ropa,8,24.48,20.0,172.36
+2026-07-03,San José,Calzado,12,59.91,0.0,1150.23
+2026-07-03,Cartago,Ropa,14,23.96,20.0,161.02
+2026-07-03,Alajuela,Accesorios,7,10.83,20.0,66.72
+2026-07-04,San José,Accesorios,7,11.05,10.0,111.35
+2026-07-04,Alajuela,Calzado,8,57.12,10.0,452.35
+2026-07-04,Heredia,Ropa,8,24.41,10.0,175.73
+2026-07-05,Heredia,Calzado,10,58.67,0.0,586.69
+2026-07-05,Alajuela,Ropa,4,25.16,5.0,105.19
+2026-07-05,Heredia,Ropa,12,25.93,20.0,248.91
+2026-07-06,San José,Accesorios,1,11.65,10.0,16.77
+2026-07-06,Cartago,Accesorios,9,12.21,10.0,59.34
+2026-07-06,Cartago,Ropa,14,25.99,10.0,196.49
+2026-07-07,Heredia,Ropa,1,24.38,5.0,23.16
+2026-07-07,Cartago,Accesorios,13,11.98,20.0,74.74
+2026-07-07,San José,Ropa,7,26.72,0.0,299.24
+2026-07-08,Cartago,Calzado,12,59.72,10.0,387.0
+2026-07-08,Alajuela,Calzado,1,53.35,20.0,46.95
+2026-07-08,Alajuela,Ropa,13,22.84,10.0,293.89
+2026-07-09,San José,Accesorios,9,12.82,10.0,166.16
+2026-07-09,Alajuela,Accesorios,10,11.87,20.0,104.49
+2026-07-09,Heredia,Ropa,1,27.35,20.0,21.88
+2026-07-10,San José,Accesorios,6,12.63,5.0,115.19
+2026-07-10,Heredia,Ropa,8,24.34,0.0,194.72
+2026-07-10,Heredia,Accesorios,4,12.84,20.0,41.09
+2026-07-11,Alajuela,Ropa,3,25.24,10.0,74.96
+2026-07-11,Heredia,Accesorios,10,12.51,20.0,100.1
+2026-07-11,Cartago,Calzado,12,59.23,5.0,405.16
+2026-07-12,Cartago,Accesorios,3,12.19,10.0,19.75
+2026-07-12,Heredia,Accesorios,2,13.07,10.0,23.53
+2026-07-12,San José,Calzado,4,53.88,5.0,327.6
+2026-07-13,Alajuela,Ropa,10,24.39,10.0,241.5
+2026-07-13,Heredia,Calzado,7,56.54,5.0,376.01
+2026-07-13,Heredia,Calzado,10,53.95,20.0,431.64
+2026-07-14,Heredia,Accesorios,14,12.5,0.0,174.97
+2026-07-14,Cartago,Calzado,4,55.34,20.0,106.26
+2026-07-14,San José,Accesorios,10,12.58,10.0,181.18
+2026-07-15,San José,Ropa,9,26.63,0.0,383.46
+2026-07-15,Alajuela,Calzado,12,55.74,0.0,735.79
+2026-07-15,Alajuela,Calzado,5,59.56,20.0,262.06
+2026-07-16,Cartago,Accesorios,2,12.67,10.0,13.69
+2026-07-16,Alajuela,Ropa,4,26.79,0.0,117.86
+2026-07-16,Heredia,Calzado,1,49.71,20.0,39.77
+2026-07-17,Alajuela,Ropa,4,22.58,0.0,99.34
+2026-07-17,Alajuela,Accesorios,12,12.32,5.0,154.53
+2026-07-17,Heredia,Accesorios,1,11.6,5.0,11.02
+2026-07-18,Cartago,Accesorios,3,12.9,10.0,20.89
+2026-07-18,San José,Ropa,10,24.46,5.0,371.77
+2026-07-18,Heredia,Accesorios,4,12.59,20.0,40.27
+2026-07-19,Cartago,Calzado,2,52.21,20.0,50.12
+2026-07-19,San José,Calzado,8,56.42,5.0,686.12
+2026-07-19,Alajuela,Calzado,3,59.41,10.0,176.44
+2026-07-20,Alajuela,Calzado,10,58.98,0.0,648.81
+2026-07-20,Heredia,Calzado,2,53.53,5.0,101.71
+2026-07-20,Heredia,Calzado,1,54.8,0.0,54.8
+2026-07-21,San José,Ropa,12,25.18,20.0,386.72
+2026-07-21,Heredia,Calzado,9,53.29,0.0,479.61
+2026-07-21,San José,Accesorios,8,11.96,20.0,122.49
+2026-07-22,Alajuela,Accesorios,9,13.11,10.0,116.85
+2026-07-22,Alajuela,Ropa,7,26.9,10.0,186.41
+2026-07-22,San José,Ropa,8,24.07,5.0,292.72
+2026-07-23,San José,Calzado,9,57.02,10.0,739.02
+2026-07-23,San José,Ropa,2,27.24,5.0,82.82
+2026-07-23,San José,Accesorios,12,11.67,20.0,179.24
+2026-07-24,Cartago,Accesorios,10,12.84,20.0,61.61
+2026-07-24,San José,Accesorios,9,12.71,5.0,173.92
+2026-07-24,San José,Calzado,14,59.25,20.0,1061.84
+2026-07-25,Alajuela,Accesorios,8,11.0,20.0,77.46
+2026-07-25,Cartago,Accesorios,13,13.02,0.0,101.52
+2026-07-25,Heredia,Calzado,5,60.29,0.0,301.46
+2026-07-26,San José,Ropa,2,23.71,0.0,75.86
+2026-07-26,Cartago,Accesorios,8,12.32,0.0,59.13
+2026-07-26,Heredia,Ropa,12,22.95,0.0,275.41
+2026-07-27,Cartago,Accesorios,14,12.25,20.0,82.29
+2026-07-27,Alajuela,Ropa,10,26.04,20.0,229.18
+2026-07-27,Heredia,Ropa,8,26.23,0.0,209.82
+2026-07-28,San José,Calzado,13,58.93,20.0,980.52
+2026-07-28,Cartago,Accesorios,7,11.5,5.0,45.9
+2026-07-28,Alajuela,Accesorios,12,11.08,5.0,138.92
+2026-07-29,Heredia,Ropa,13,26.58,10.0,311.04
+2026-07-29,Heredia,Ropa,12,22.63,10.0,244.39
+2026-07-29,Cartago,Calzado,1,52.06,0.0,31.24
+2026-07-30,Alajuela,Ropa,4,23.68,20.0,83.37
+2026-07-30,Heredia,Ropa,1,26.38,5.0,25.06
+2026-07-30,Heredia,Calzado,7,54.36,5.0,361.51
+2026-07-31,San José,Ropa,12,26.69,5.0,486.81
+2026-07-31,San José,Calzado,13,56.85,20.0,945.93
+2026-07-31,Cartago,Ropa,14,26.71,0.0,224.4
+2026-08-01,Alajuela,Ropa,1,26.43,0.0,29.07
+2026-08-01,Heredia,Accesorios,1,12.91,10.0,11.62
+2026-08-01,Heredia,Accesorios,8,11.46,20.0,73.36
+2026-08-02,Heredia,Ropa,1,24.28,5.0,23.06
+2026-08-02,Heredia,Ropa,12,25.64,0.0,307.71
+2026-08-02,Alajuela,Accesorios,1,12.2,0.0,13.42
+2026-08-03,Alajuela,Accesorios,8,12.67,5.0,105.89
+2026-08-03,Heredia,Ropa,9,26.54,20.0,191.11
+2026-08-03,Heredia,Accesorios,6,11.53,20.0,55.35
+2026-08-04,San José,Ropa,2,23.1,5.0,70.24
+2026-08-04,San José,Ropa,12,26.21,5.0,478.01
+2026-08-04,Cartago,Ropa,8,25.94,0.0,124.49
+2026-08-05,San José,Calzado,11,52.55,20.0,739.85
+2026-08-05,Cartago,Accesorios,10,10.94,20.0,52.5
+2026-08-05,Cartago,Accesorios,8,10.86,0.0,52.11
+2026-08-06,San José,Ropa,1,23.74,5.0,36.09
+2026-08-06,Heredia,Calzado,7,52.51,0.0,367.56
+2026-08-06,Heredia,Accesorios,13,11.3,0.0,146.87
+2026-08-07,San José,Accesorios,4,10.92,20.0,55.92
+2026-08-07,Cartago,Ropa,4,23.35,5.0,53.24
+2026-08-07,Alajuela,Ropa,13,24.25,20.0,277.42
+2026-08-08,Heredia,Accesorios,8,11.02,5.0,83.76
+2026-08-08,Cartago,Calzado,9,51.77,0.0,279.57
+2026-08-08,Alajuela,Accesorios,5,11.85,0.0,65.18
+2026-08-09,Alajuela,Calzado,4,58.83,5.0,245.9
+2026-08-09,Alajuela,Ropa,5,26.86,5.0,140.33
+2026-08-09,Heredia,Accesorios,14,11.77,5.0,156.57
+2026-08-10,Cartago,Calzado,6,50.89,0.0,183.19
+2026-08-10,San José,Calzado,8,52.46,0.0,671.5
+2026-08-10,Alajuela,Ropa,1,25.87,0.0,28.46
+2026-08-11,San José,Ropa,13,24.54,10.0,459.33
+2026-08-11,San José,Calzado,7,55.77,10.0,562.2
+2026-08-11,San José,Calzado,11,57.61,0.0,1013.85
+2026-08-12,San José,Ropa,4,25.79,0.0,165.08
+2026-08-12,Alajuela,Ropa,9,26.8,10.0,238.76
+2026-08-12,Alajuela,Accesorios,6,11.01,0.0,72.64
+2026-08-13,Cartago,Calzado,5,52.77,5.0,150.38
+2026-08-13,Cartago,Calzado,3,49.88,0.0,89.78
+2026-08-13,Heredia,Accesorios,10,12.05,20.0,96.41
+2026-08-14,San José,Ropa,5,25.57,5.0,194.36
+2026-08-14,Cartago,Ropa,2,23.77,5.0,27.1
+2026-08-14,Cartago,Ropa,10,22.78,0.0,136.66
+2026-08-15,Heredia,Accesorios,10,11.91,5.0,113.18
+2026-08-15,Cartago,Accesorios,14,11.2,10.0,84.69
+2026-08-15,Heredia,Calzado,13,51.64,10.0,604.19
+2026-08-16,Cartago,Ropa,3,24.41,20.0,35.15
+2026-08-16,Alajuela,Ropa,1,27.23,0.0,29.95
+2026-08-16,San José,Ropa,13,24.3,20.0,404.35
+2026-08-17,Heredia,Ropa,14,26.05,10.0,328.18
+2026-08-17,San José,Ropa,9,24.36,5.0,333.28
+2026-08-17,San José,Ropa,9,24.53,20.0,282.54
+2026-08-18,Heredia,Calzado,2,51.04,20.0,81.67
+2026-08-18,Heredia,Accesorios,8,11.24,10.0,80.95
+2026-08-18,San José,Calzado,1,57.98,20.0,74.21
+2026-08-19,San José,Accesorios,11,11.83,10.0,187.39
+2026-08-19,San José,Calzado,13,52.64,10.0,985.39
+2026-08-19,Alajuela,Accesorios,1,13.17,0.0,14.49
+2026-08-20,Cartago,Ropa,4,26.89,20.0,51.63
+2026-08-20,Heredia,Accesorios,14,11.43,0.0,160.08
+2026-08-20,Heredia,Ropa,2,24.67,5.0,46.88
+2026-08-21,Heredia,Ropa,12,25.33,0.0,304.02
+2026-08-21,San José,Accesorios,10,11.2,10.0,161.26
+2026-08-21,Heredia,Calzado,10,54.2,10.0,487.8
+2026-08-22,Alajuela,Ropa,10,23.92,10.0,236.81
+2026-08-22,San José,Ropa,4,26.55,5.0,161.43
+2026-08-22,Heredia,Ropa,13,22.97,10.0,268.78
+2026-08-23,Heredia,Calzado,7,60.41,5.0,401.7
+2026-08-23,Alajuela,Calzado,8,52.09,10.0,412.56
+2026-08-23,Alajuela,Ropa,11,24.16,20.0,233.83
+2026-08-24,Cartago,Ropa,5,22.88,0.0,68.63
+2026-08-24,Cartago,Calzado,1,59.54,10.0,32.15
+2026-08-24,Cartago,Accesorios,5,12.79,,30.69
+2026-08-25,Cartago,Calzado,9,50.24,5.0,257.75
+2026-08-25,Heredia,Ropa,3,25.14,0.0,75.42
+2026-08-25,Heredia,Ropa,11,24.45,0.0,268.98
+2026-08-26,Cartago,Ropa,9,25.53,5.0,130.97
+2026-08-26,San José,Accesorios,10,11.61,5.0,176.41
+2026-08-26,San José,Calzado,14,60.02,10.0,1209.98
+2026-08-27,Cartago,Ropa,4,23.59,5.0,53.79
+2026-08-27,Heredia,Ropa,2,26.6,20.0,42.56
+2026-08-27,Heredia,Calzado,5,52.44,0.0,262.22
+2026-08-28,Alajuela,Accesorios,6,12.36,,81.57
+2026-08-28,San José,Ropa,1,24.64,0.0,39.42
+2026-08-28,San José,Calzado,5,55.28,10.0,398.05
+2026-08-29,Alajuela,Ropa,14,25.11,0.0,386.7
+2026-08-29,Heredia,Calzado,2,56.39,5.0,107.13
+2026-08-29,Heredia,Calzado,14,50.25,10.0,633.12
+2026-08-30,Cartago,Calzado,9,50.15,0.0,270.83
+2026-08-30,Alajuela,Ropa,14,27.35,20.0,337.01
+2026-08-30,Heredia,Accesorios,14,11.41,5.0,151.72
+2026-08-31,Heredia,Calzado,9,53.42,0.0,480.82
+2026-08-31,Heredia,Ropa,4,23.7,10.0,85.32
+2026-08-31,Alajuela,Calzado,12,56.6,5.0,709.79
+2026-09-01,Alajuela,Accesorios,11,13.16,0.0,159.25
+2026-09-01,San José,Accesorios,8,11.77,10.0,135.55
+2026-09-01,San José,Accesorios,13,11.57,20.0,192.54
+2026-09-02,Cartago,Calzado,13,53.34,0.0,416.09
+2026-09-02,San José,Ropa,4,22.64,0.0,144.87
+2026-09-02,San José,Ropa,2,22.95,10.0,66.09
+2026-09-03,Alajuela,Ropa,13,22.74,0.0,325.19
+2026-09-03,Alajuela,Calzado,1,53.06,10.0,52.53
+2026-09-03,Heredia,Accesorios,11,13.16,5.0,137.55
+2026-09-04,Cartago,Accesorios,11,11.14,5.0,69.84
+2026-09-04,Heredia,Ropa,10,25.24,0.0,252.45
+2026-09-04,San José,Ropa,7,23.54,0.0,263.6
+2026-09-05,Alajuela,Ropa,3,22.68,20.0,59.89
+2026-09-05,San José,Ropa,8,26.69,10.0,307.41
+2026-09-05,Heredia,Ropa,4,23.14,20.0,74.04
+2026-09-06,San José,Ropa,13,23.18,0.0,482.05
+2026-09-06,Alajuela,Calzado,2,58.49,20.0,102.94
+2026-09-06,Cartago,Ropa,6,23.72,10.0,76.85
+2026-09-07,Alajuela,Accesorios,13,11.28,0.0,161.27
+2026-09-07,Heredia,Ropa,9,27.22,10.0,220.45
+2026-09-07,Alajuela,Accesorios,12,11.27,20.0,118.97
+2026-09-08,Cartago,Accesorios,2,12.8,5.0,14.59
+2026-09-08,San José,Calzado,2,52.87,5.0,160.74
+2026-09-08,San José,Ropa,7,25.33,20.0,226.94
+2026-09-09,San José,Calzado,8,52.92,5.0,643.52
+2026-09-09,Alajuela,Calzado,12,53.23,20.0,562.12
+2026-09-09,Alajuela,Accesorios,3,13.04,10.0,38.72
+2026-09-10,Alajuela,Ropa,8,27.04,0.0,237.94
+2026-09-10,Alajuela,Calzado,11,51.42,0.0,622.22
+2026-09-10,Cartago,Accesorios,7,12.54,0.0,52.66
+2026-09-11,San José,Accesorios,9,11.13,0.0,160.34
+2026-09-11,Heredia,Calzado,14,52.79,5.0,702.14
+2026-09-11,San José,Accesorios,14,10.97,20.0,196.58
+2026-09-12,Alajuela,Calzado,14,56.63,10.0,784.85
+2026-09-12,San José,Accesorios,11,12.54,5.0,209.73
+2026-09-12,Alajuela,Calzado,9,57.71,10.0,514.19
+2026-09-13,San José,Accesorios,2,12.66,20.0,32.41
+2026-09-13,Heredia,Accesorios,5,11.75,0.0,58.74
+2026-09-13,Heredia,Ropa,6,23.39,5.0,133.3
+2026-09-14,Cartago,Accesorios,11,10.81,20.0,57.08
+2026-09-14,Cartago,Ropa,9,24.7,0.0,133.39
+2026-09-14,Alajuela,Ropa,4,27.17,10.0,107.58
+2026-09-15,Cartago,Ropa,13,24.74,5.0,183.35
+2026-09-15,San José,Calzado,2,56.27,5.0,171.07
+2026-09-15,San José,Accesorios,6,13.0,0.0,124.8
+2026-09-16,Heredia,Ropa,9,26.81,,217.18
+2026-09-16,San José,Accesorios,3,12.58,0.0,60.36
+2026-09-16,San José,Ropa,2,25.46,10.0,73.33
+2026-09-17,San José,Calzado,4,52.05,0.0,333.12
+2026-09-17,Alajuela,Calzado,4,57.74,5.0,241.33
+2026-09-17,Heredia,Ropa,4,24.59,5.0,93.43
+2026-09-18,Cartago,Accesorios,5,12.5,20.0,29.99
+2026-09-18,San José,Ropa,3,23.62,5.0,107.69
+2026-09-18,San José,Ropa,7,27.2,0.0,304.68
+2026-09-19,Alajuela,Calzado,5,51.3,5.0,268.07
+2026-09-19,Heredia,Calzado,6,58.2,20.0,279.35
+2026-09-19,Heredia,Calzado,4,59.29,20.0,189.74
+2026-09-20,San José,Calzado,11,51.17,0.0,900.63
+2026-09-20,San José,Ropa,8,26.83,20.0,274.69
+2026-09-20,San José,Calzado,8,56.59,20.0,579.46
+2026-09-21,Cartago,Ropa,13,25.52,10.0,179.13
+2026-09-21,San José,Calzado,11,52.29,20.0,736.3
+2026-09-21,Alajuela,Calzado,14,53.11,0.0,817.93
+2026-09-22,Heredia,Calzado,1,52.09,0.0,52.09
+2026-09-22,Alajuela,Accesorios,3,11.86,10.0,35.22
+2026-09-22,Heredia,Calzado,12,56.63,10.0,611.57
+2026-09-23,Cartago,Ropa,8,26.14,10.0,112.94
+2026-09-23,Cartago,Calzado,14,57.26,0.0,481.01
+2026-09-23,Heredia,Ropa,10,24.23,10.0,218.11
+2026-09-24,San José,Ropa,12,24.18,10.0,417.84
+2026-09-24,Heredia,Ropa,3,26.32,0.0,78.95
