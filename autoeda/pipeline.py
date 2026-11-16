@@ -8,6 +8,8 @@ def run_analysis(df_raw):
         "desc": stats.descriptivas(df, tipos),
         "corr": stats.correlaciones(df, tipos),
         "anova": stats.anova_eta(df, tipos),
+        "asociaciones": stats.asociaciones_categoricas(df, tipos),
+        "tendencias": stats.tendencias(df, tipos),
     }
     out = outliers.detectar(df, tipos)
     cl = clustering.agrupar(df, tipos)

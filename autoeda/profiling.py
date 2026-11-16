@@ -26,10 +26,27 @@ def _intentar_fecha(s: pd.Series):
     return None
 
 
+# Valores que indican una variable lógica (sí/no). Sin letras sueltas: "N/S" puede ser Norte/Sur.
+_VALORES_BOOL = {"true", "false", "verdadero", "falso", "si", "sí", "no", "yes", "0", "1", "0.0", "1.0"}
+
+# Nombre de cada tipo en (singular, plural) para los textos de hallazgos
+NOMBRES_TIPO = {"numeric": ("numérica", "numéricas"), "categorical": ("categórica", "categóricas"),
+                "boolean": ("lógica", "lógicas"), "datetime": ("temporal", "temporales"),
+                "text": ("de texto", "de texto"), "id": ("identificador", "identificadores")}
+
+
+def _es_logica(s: pd.Series) -> bool:
+    """True si la columna tiene exactamente 2 valores de tipo sí/no, verdadero/falso o 0/1."""
+    if pd.api.types.is_bool_dtype(s):
+        return True
+    valores = s.dropna().unique()
+    return len(valores) == 2 and {str(v).strip().lower() for v in valores} <= _VALORES_BOOL
+
+
 def profile(df: pd.DataFrame):
     """Limpia el DataFrame y clasifica columnas.
 
-    Tipos: numeric, categorical, datetime, text, id.
+    Tipos: numeric, categorical, boolean, datetime, text, id.
     Devuelve (df_limpio, tipos, notas).
     """
     notas = []
@@ -66,8 +83,8 @@ def profile(df: pd.DataFrame):
         nun = s.nunique(dropna=True)
         if pd.api.types.is_datetime64_any_dtype(s):
             tipos[c] = "datetime"
-        elif pd.api.types.is_bool_dtype(s):
-            tipos[c] = "categorical"
+        elif _es_logica(s):
+            tipos[c] = "boolean"
         elif pd.api.types.is_numeric_dtype(s):
             es_entero = (s.dropna() % 1 == 0).all()
             if es_entero and nun == n and n > 20:
@@ -85,5 +102,6 @@ def profile(df: pd.DataFrame):
     return df, tipos, notas
 
 
-def columnas(tipos: dict, tipo: str):
-    return [c for c, t in tipos.items() if t == tipo]
+def columnas(tipos: dict, *tipo: str):
+    """Columnas cuyo tipo está entre los indicados, p. ej. columnas(tipos, "categorical", "boolean")."""
+    return [c for c, t in tipos.items() if t in tipo]

@@ -1,4 +1,7 @@
 """Gráficos interactivos con Plotly (tema visual propio, sobrio)."""
+import itertools
+
+import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import plotly.io as pio
@@ -36,7 +39,7 @@ def boxplots(df, tipos, max_cols=8):
 
 def categoricas(df, tipos, max_cols=4):
     figs = []
-    for c in columnas(tipos, "categorical")[:max_cols]:
+    for c in columnas(tipos, "categorical", "boolean")[:max_cols]:
         s = df[c].value_counts().head(15)
         f = px.bar(x=s.index.astype(str), y=s.values, title=f"Frecuencia de {c}",
                    labels={"x": c, "y": "Conteo"})
@@ -52,13 +55,24 @@ def heatmap(res):
                      title="Matriz de correlación (Pearson)", aspect="auto")
 
 
+def _pares_dispersion(res, max_n):
+    """Pares fuertemente correlacionados; si no hay, los de mayor |r| para no dejar la sección vacía."""
+    pares = res["stats"]["corr"]["pares"][:max_n]
+    m = res["stats"]["corr"]["pearson"]
+    if pares or m.empty:
+        return pares
+    todos_ = [{"a": a, "b": b, "pearson": float(m.loc[a, b])}
+              for a, b in itertools.combinations(m.columns, 2) if pd.notna(m.loc[a, b])]
+    return sorted(todos_, key=lambda p: -abs(p["pearson"]))[:min(max_n, 2)]
+
+
 def dispersiones(res, max_n=4):
     df, cl = res["df"], res["clusters"]
     color = None
     if cl is not None and len(cl["etiquetas"]) == len(df):
         color = [f"Grupo {int(e) + 1}" for e in cl["etiquetas"]]
     figs = []
-    for p in res["stats"]["corr"]["pares"][:max_n]:
+    for p in _pares_dispersion(res, max_n):
         f = px.scatter(df, x=p["a"], y=p["b"], color=color, opacity=0.75,
                        title=f"{p['a']} vs {p['b']} (r={p['pearson']:.2f})",
                        labels={"color": "Grupo"})
@@ -73,7 +87,7 @@ def pca_clusters(res):
     return px.scatter(x=cl["pca"][:, 0], y=cl["pca"][:, 1], opacity=0.8,
                       color=[f"Grupo {int(e) + 1}" for e in cl["etiquetas"]],
                       labels={"x": "Componente 1", "y": "Componente 2", "color": "Grupo"},
-                      title="Segmentos de clientes (proyección PCA)")
+                      title="Grupos detectados por K-means (proyección PCA)")
 
 
 def silhouette_k(res):
@@ -88,6 +102,41 @@ def silhouette_k(res):
     return f
 
 
+def boxplots_por_categoria(res, max_n=4):
+    """Boxplot de la numérica separada por la categórica, para los efectos ANOVA significativos."""
+    df = res["df"]
+    sig = [r for r in res["stats"]["anova"] if r["p"] < 0.05 and r["eta2"] >= 0.06][:max_n]
+    return [px.box(df, x=r["categoria"], y=r["numerica"], color=r["categoria"],
+                   title=f"{r['numerica']} según {r['categoria']} (explica {r['eta2']:.0%})")
+            .update_layout(showlegend=False) for r in sig]
+
+
+def asociacion_categorica(res, max_n=2):
+    """Tabla cruzada en porcentaje por fila para los pares de categóricas más asociados."""
+    df = res["df"]
+    sig = [r for r in res["stats"].get("asociaciones", []) if r["p"] < 0.05 and r["cramer_v"] >= 0.1][:max_n]
+    figs = []
+    for r in sig:
+        t = pd.crosstab(df[r["a"]], df[r["b"]], normalize="index") * 100
+        t.index, t.columns = t.index.astype(str), t.columns.astype(str)
+        figs.append(px.imshow(t, text_auto=".0f", color_continuous_scale=["#121A2B", "#2DD4BF"], aspect="auto",
+                              labels={"color": "% de la fila"},
+                              title=f"{r['a']} vs {r['b']} (% por fila, V de Cramér={r['cramer_v']:.2f})"))
+    return figs
+
+
+def series_tiempo(res, max_n=4):
+    """Promedio por periodo de las variables numéricas con la tendencia más marcada."""
+    figs = []
+    for r in res["stats"].get("tendencias", [])[:max_n]:
+        s = r["serie"]
+        f = px.line(x=s.index.to_timestamp(), y=s.values, markers=True,
+                    labels={"x": r["fecha"], "y": f"Promedio de {r['numerica']}"},
+                    title=f"{r['numerica']} por {r['frecuencia']} (ρ={r['rho']:.2f})")
+        figs.append(f)
+    return figs
+
+
 def todos(res):
     """Lista de (titulo, figura) para la app y el reporte."""
     df, tipos = res["df"], res["tipos"]
@@ -98,6 +147,9 @@ def todos(res):
         if f is not None:
             figs.append((titulo, f))
     figs += [("Dispersión", f) for f in dispersiones(res)]
+    figs += [("Por categoría", f) for f in boxplots_por_categoria(res)]
+    figs += [("Entre categorías", f) for f in asociacion_categorica(res)]
+    figs += [("Tendencias", f) for f in series_tiempo(res)]
     for titulo, f in (("Clusters", pca_clusters(res)), ("Silhouette", silhouette_k(res))):
         if f is not None:
             figs.append((titulo, f))

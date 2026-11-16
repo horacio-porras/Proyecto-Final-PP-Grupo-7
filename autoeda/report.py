@@ -1,6 +1,6 @@
 """Exportación del análisis a un HTML autocontenido con estilo formal."""
 import html
-from . import charts
+from . import charts, insights
 
 CSS = """
 body{font-family:Inter,'Segoe UI',Arial,sans-serif;background:#0B1220;color:#E6EDF7;margin:0}
@@ -33,9 +33,7 @@ def construir_html(nombre, res):
          f"<div class='hero'><div class='wrap'><h1>Reporte de análisis exploratorio</h1>"
          f"<p>{html.escape(nombre)} · generado con AutoEDA</p></div></div><div class='wrap'>",
          "<div class='kpis'>" + "".join(f"<div class='kpi'><b>{v}</b><span>{l}</span></div>" for l, v in kpis(res)) + "</div>"]
-    secciones = {}
-    for sec, frase in res["insights"]:
-        secciones.setdefault(sec, []).append(frase)
+    secciones = insights.para_mostrar(res["insights"])
     for sec, frases in secciones.items():
         p.append(f"<div class='card'><h2>{html.escape(sec)}</h2><ul>"
                  + "".join(f"<li>{html.escape(f)}</li>" for f in frases) + "</ul></div>")

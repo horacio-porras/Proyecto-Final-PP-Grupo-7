@@ -4,7 +4,7 @@ import html
 import pandas as pd
 import streamlit as st
 
-from autoeda import charts, loader, pipeline, report
+from autoeda import charts, insights, loader, pipeline, report
 
 st.set_page_config(page_title="AutoEDA · Análisis exploratorio automático", layout="wide")
 
@@ -96,8 +96,10 @@ hr { border-color: var(--bd); }
 """
 st.markdown(CSS, unsafe_allow_html=True)
 
-COLOR_SECCION = {"Resumen": "#94A3B8", "Calidad de datos": "#FBBF24", "Correlaciones": "#60A5FA",
-                 "Diferencias entre grupos": "#A78BFA", "Valores atípicos": "#F472B6", "Clustering": "#2DD4BF"}
+COLOR_SECCION = {"Hallazgos clave": "#FBBF24", "Resumen": "#94A3B8", "Calidad de datos": "#FBBF24",
+                 "Correlaciones": "#60A5FA", "Diferencias entre grupos": "#A78BFA",
+                 "Dependencia entre categorías": "#FB923C", "Tendencias en el tiempo": "#34D399",
+                 "Valores atípicos": "#F472B6", "Clustering": "#2DD4BF"}
 
 
 def mostrar(fig):
@@ -182,9 +184,7 @@ t1, t2, t3, t4, t5 = st.tabs(["Hallazgos", "Estadística", "Visualizaciones", "V
 
 # ---------- Hallazgos ----------
 with t1:
-    secciones = {}
-    for sec, frase in res["insights"]:
-        secciones.setdefault(sec, []).append(frase)
+    secciones = insights.para_mostrar(res["insights"])
     for sec, frases in secciones.items():
         items = "".join(f"<li>{html.escape(f, quote=False)}</li>" for f in frases)
         st.markdown(f"<div class='card' style='--c:{COLOR_SECCION.get(sec, '#0F766E')}'>"
@@ -204,6 +204,20 @@ with t2:
         a["F"] = a["F"].round(1)
         tabla(a.rename(columns={"categoria": "Categoría", "numerica": "Variable numérica",
                                 "eta2": "Varianza explicada"}))
+    if res["stats"]["asociaciones"]:
+        st.markdown("#### Dependencia entre variables categóricas (chi-cuadrado y V de Cramér)")
+        a = pd.DataFrame(res["stats"]["asociaciones"])
+        a["p"] = a["p"].map(lambda v: "<0.001" if v < 0.001 else f"{v:.3f}")
+        a[["chi2", "cramer_v"]] = a[["chi2", "cramer_v"]].round(2)
+        tabla(a.rename(columns={"a": "Variable A", "b": "Variable B", "chi2": "χ²", "cramer_v": "V de Cramér"}))
+    if res["stats"]["tendencias"]:
+        st.markdown("#### Tendencias en el tiempo")
+        a = pd.DataFrame(res["stats"]["tendencias"]).drop(columns="serie")
+        a["p"] = a["p"].map(lambda v: "<0.001" if v < 0.001 else f"{v:.3f}")
+        a["rho"] = a["rho"].round(2)
+        a["cambio"] = a["cambio"].map(lambda v: f"{v:+.0%}" if v == v else "—")
+        tabla(a.rename(columns={"fecha": "Fecha", "numerica": "Variable", "rho": "Spearman ρ",
+                                "periodos": "Periodos", "frecuencia": "Periodo", "cambio": "Cambio"}))
     with st.expander("Vista previa de los datos limpios"):
         st.dataframe(df.head(100))
 
@@ -214,7 +228,7 @@ with t3:
     def de(*titulos):
         return [(t, f) for t, f in figs if t in titulos]
 
-    s1, s2, s3 = st.tabs(["Distribuciones", "Relaciones", "Segmentos"])
+    s1, s2, s3, s4 = st.tabs(["Distribuciones", "Relaciones", "Segmentos", "Tiempo"])
     with s1:
         for t in ("Histogramas", "Boxplots", "Categóricas"):
             g = [f for tt, f in figs if tt == t]
@@ -222,24 +236,31 @@ with t3:
                 st.markdown(f"##### {t}")
                 grid(g, 2)
     with s2:
-        for t in ("Correlación", "Dispersión"):
+        for t in ("Correlación", "Dispersión", "Por categoría", "Entre categorías"):
             g = [f for tt, f in figs if tt == t]
             if g:
                 st.markdown(f"##### {t}")
                 grid(g, 1 if t == "Correlación" else 2)
-        if not de("Correlación", "Dispersión"):
-            st.info("Se necesitan al menos 2 variables numéricas.")
+        if not de("Correlación", "Dispersión", "Por categoría", "Entre categorías"):
+            st.info("No se encontraron relaciones entre variables para graficar.")
     with s3:
         g = [f for tt, f in figs if tt in ("Clusters", "Silhouette")]
         if g:
             grid(g, 2)
         else:
             st.info("Se necesitan al menos 2 variables numéricas y 20 filas.")
+    with s4:
+        g = [f for tt, f in figs if tt == "Tendencias"]
+        if g:
+            grid(g, 2)
+        else:
+            st.info("Se necesita una columna de fecha y al menos 4 periodos distintos.")
 
 # ---------- Outliers ----------
 with t4:
     o = res["outliers"]
-    filas = [{"Variable": c, "Atípicos (IQR)": d["iqr"], "Atípicos (Z-score)": d["zscore"],
+    filas = [{"Variable": c, "Atípicos (IQR)": d["iqr"], "% (IQR)": f"{d['pct_iqr']:.1%}",
+              "Atípicos (Z-score)": d["zscore"],
               "Límite inferior": round(d["limites_iqr"][0], 2), "Límite superior": round(d["limites_iqr"][1], 2)}
              for c, d in o["por_columna"].items()]
     if filas:
