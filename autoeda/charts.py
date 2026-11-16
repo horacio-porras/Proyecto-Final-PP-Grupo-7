@@ -10,7 +10,7 @@ from .profiling import columnas
 
 # Paleta categórica de tablero: azul, naranja, verde, rojo, celeste, ámbar, verde oscuro, violeta
 PALETA = ["#4E8CBA", "#FB8D34", "#80C25D", "#E4584C", "#73B0D7", "#FBAD56", "#559E38", "#8E6BB0"]
-_EJE = dict(gridcolor="#E9ECF0", zerolinecolor="#D9DEE5", linecolor="#D9DEE5", showline=True,
+_EJE = dict(gridcolor="#E9ECF0", zerolinecolor="#D9DEE5", linecolor="#D9DEE5", showline=True, automargin=True,
             tickfont=dict(color="#6E7A87", size=12), title=dict(font=dict(color="#45515D", size=12)))
 
 pio.templates["autoeda"] = go.layout.Template(layout=dict(

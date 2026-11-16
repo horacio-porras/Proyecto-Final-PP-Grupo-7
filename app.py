@@ -109,9 +109,7 @@ section[data-testid="stSidebar"] { background:var(--card); border-right:1px soli
 """
 st.markdown(CSS, unsafe_allow_html=True)
 
-COLOR_SECCION = {"Resumen": "#6E7A87", "Calidad de datos": "#FBAD56", "Correlaciones": "#4E8CBA",
-                 "Diferencias entre grupos": "#8E6BB0", "Dependencia entre categorías": "#FB8D34",
-                 "Tendencias en el tiempo": "#80C25D", "Valores atípicos": "#E4584C", "Clustering": "#73B0D7"}
+COLOR_SECCION = insights.COLOR_SECCION
 
 _tarjetas = itertools.count()
 esc = html.escape
@@ -245,15 +243,15 @@ with t1:
         with tarjeta("Hallazgos clave", resumen):
             st.markdown(filas, unsafe_allow_html=True)
     st.write("")
-    items = list(secciones.items())
-    for i in range(0, len(items), 2):
-        fila = st.columns(2)
-        for col, (sec, frases) in zip(fila, items[i:i + 2]):
-            lis = "".join(f"<li>{esc(f, quote=False)}</li>" for f in frases)
-            with col, tarjeta():
-                st.markdown(f"<div class='ct' style='--c:{COLOR_SECCION.get(sec, '#4E8CBA')}'>"
-                            f"<span class='sw'></span>{esc(sec)}<span class='cnt'>{len(frases)}</span></div>"
-                            f"<ul class='hl'>{lis}</ul>", unsafe_allow_html=True)
+    # Dos columnas independientes y balanceadas: una tarjeta larga no deja huecos junto a una corta
+    for col, grupo in zip(st.columns(2), insights.repartir_columnas(secciones)):
+        with col:
+            for sec, frases in grupo:
+                lis = "".join(f"<li>{esc(f, quote=False)}</li>" for f in frases)
+                with tarjeta():
+                    st.markdown(f"<div class='ct' style='--c:{COLOR_SECCION.get(sec, '#4E8CBA')}'>"
+                                f"<span class='sw'></span>{esc(sec)}<span class='cnt'>{len(frases)}</span></div>"
+                                f"<ul class='hl'>{lis}</ul>", unsafe_allow_html=True)
 
 # ---------- Estadística ----------
 with t2:

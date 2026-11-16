@@ -7,6 +7,11 @@ primero lo más relevante a un usuario sin conocimientos estadísticos.
 """
 from .profiling import NOMBRES_TIPO
 
+# Color de cada tema de hallazgos (compartido por la app y el reporte HTML)
+COLOR_SECCION = {"Resumen": "#6E7A87", "Calidad de datos": "#E29B3A", "Correlaciones": "#4E8CBA",
+                 "Diferencias entre grupos": "#8E6BB0", "Dependencia entre categorías": "#E0782A",
+                 "Tendencias en el tiempo": "#559E38", "Valores atípicos": "#D9483B", "Clustering": "#3F86B8"}
+
 
 def _fuerza(r):
     a = abs(r)
@@ -115,3 +120,20 @@ def para_mostrar(hallazgos, n_clave=5):
         return secciones
     resumen = secciones.pop("Resumen", [])
     return {"Resumen": resumen, "Hallazgos clave": [f for _, f, _ in top], **secciones}
+
+
+def repartir_columnas(secciones, n=2, chars_por_linea=70):
+    """Reparte las secciones en n columnas de altura parecida (estilo mosaico).
+
+    Cada sección va a la columna que lleva menos altura acumulada, estimada por las líneas de
+    texto de sus hallazgos. Así una tarjeta larga no deja huecos junto a una corta, y el orden
+    de importancia se mantiene de arriba hacia abajo.
+    """
+    columnas = [[] for _ in range(n)]
+    alturas = [0.0] * n
+    for sec, frases in secciones.items():
+        alto = 2.5 + sum(1 + len(f) // chars_por_linea for f in frases)
+        i = alturas.index(min(alturas))
+        columnas[i].append((sec, frases))
+        alturas[i] += alto
+    return columnas
