@@ -50,4 +50,31 @@ df = pd.DataFrame({
 })
 df.loc[rng.choice(n, 5), "consumo_kwh"] *= 3  # unos pocos hogares atípicos
 df.to_csv("data/consumo_electrico.csv", index=False)
-print("Listo: 3 archivos en data/")
+
+# 4) Envíos de una empresa de logística: la región explica buena parte del costo,
+#    el envío exprés llega más a tiempo y el costo sube mes a mes (combustible)
+rng4 = np.random.default_rng(11)  # generador propio: no altera los datasets anteriores
+n = 600
+fecha = pd.Timestamp("2026-01-01") + pd.to_timedelta(rng4.integers(0, 300, n), unit="D")
+region = rng4.choice(["Central", "Pacífico", "Caribe", "Norte"], n, p=[0.4, 0.2, 0.2, 0.2])
+dist_base = {"Central": 25, "Pacífico": 140, "Caribe": 160, "Norte": 210}
+distancia = np.array([rng4.normal(dist_base[r], 20) for r in region]).clip(3).round(1)
+tipo = rng4.choice(["Exprés", "Estándar"], n, p=[0.35, 0.65])
+peso = rng4.gamma(2.0, 4.0, n).round(1)
+mes = (fecha.month - 1).to_numpy()
+costo = (2500 + distancia * 38 + peso * 120 + np.where(tipo == "Exprés", 3000, 0)) \
+    * (1 + 0.02 * mes) + rng4.normal(0, 600, n)
+dias = np.where(tipo == "Exprés", 1, 3) + distancia / 90 + rng4.exponential(0.8, n)
+p_a_tiempo = np.where(tipo == "Exprés", 0.92, 0.6)
+df = pd.DataFrame({
+    "fecha_envio": fecha.strftime("%Y-%m-%d"), "region": region, "tipo_envio": tipo,
+    "peso_kg": peso, "distancia_km": distancia, "costo_colones": costo.round(),
+    "dias_entrega": dias.round(1),
+    "entregado_a_tiempo": np.where(rng4.random(n) < p_a_tiempo, "Sí", "No"),
+    "con_seguro": rng4.random(n) < 0.3,
+})
+df = df.sort_values("fecha_envio").reset_index(drop=True)
+df.loc[rng4.choice(n, 8, replace=False), "peso_kg"] *= 6       # paquetes extra pesados (atípicos)
+df.loc[rng4.choice(n, 12, replace=False), "dias_entrega"] = np.nan  # faltantes
+df.to_csv("data/envios_logistica.csv", index=False)
+print("Listo: 4 archivos en data/")

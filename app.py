@@ -279,7 +279,7 @@ with t5:
         st.info("Se necesitan al menos 2 variables numéricas y 20 filas.")
     else:
         st.markdown(f"**K-means:** {cl['k']} grupos (silhouette {cl['silhouette']:.2f}). "
-                    f"**DBSCAN:** {cl['dbscan']['clusters']} grupos densos y {cl['dbscan']['ruido']} puntos de ruido.")
+                    f"**DBSCAN:** {cl['dbscan']['clusters']} {'grupo denso' if cl['dbscan']['clusters'] == 1 else 'grupos densos'} y {cl['dbscan']['ruido']} puntos de ruido.")
         cols = st.columns(min(len(cl["perfil"]), 4))
         for i, g in enumerate(cl["perfil"]):
             color = charts.PALETA[i % len(charts.PALETA)]

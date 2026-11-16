@@ -88,7 +88,7 @@ def generar(df, tipos, notas, st, out, cl):
                       55 + 30 * min(cl["silhouette"], 1)))
         db = cl["dbscan"]
         h.append(("Clustering",
-                  f"DBSCAN encontró {db['clusters']} grupos densos y {db['ruido']} puntos de ruido.", 40))
+                  f"DBSCAN encontró {db['clusters']} {'grupo denso' if db['clusters'] == 1 else 'grupos densos'} y {db['ruido']} puntos de ruido.", 40))
     return sorted(h, key=lambda x: -x[2])
 
 
