@@ -1,4 +1,4 @@
-"""Gráficos interactivos con Plotly (tema visual propio, sobrio)."""
+"""Gráficos interactivos con Plotly, con estilo de tablero claro (tipo Domo)."""
 import itertools
 
 import pandas as pd
@@ -8,20 +8,31 @@ import plotly.io as pio
 
 from .profiling import columnas
 
-PALETA = ["#2DD4BF", "#60A5FA", "#FBBF24", "#F472B6", "#A78BFA", "#34D399", "#FB923C", "#94A3B8"]
-_EJE = dict(gridcolor="#243049", zerolinecolor="#2F3E5C", linecolor="#3B5078", tickfont=dict(color="#B6C6DA"))
+# Paleta categórica de tablero: azul, naranja, verde, rojo, celeste, ámbar, verde oscuro, violeta
+PALETA = ["#4E8CBA", "#FB8D34", "#80C25D", "#E4584C", "#73B0D7", "#FBAD56", "#559E38", "#8E6BB0"]
+_EJE = dict(gridcolor="#E9ECF0", zerolinecolor="#D9DEE5", linecolor="#D9DEE5", showline=True,
+            tickfont=dict(color="#6E7A87", size=12), title=dict(font=dict(color="#45515D", size=12)))
 
 pio.templates["autoeda"] = go.layout.Template(layout=dict(
     colorway=PALETA,
-    font=dict(family="Inter, Segoe UI, Arial, sans-serif", size=13, color="#E6EDF7"),
-    paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
-    title=dict(font=dict(size=15, color="#F1F5F9"), x=0.02),
+    font=dict(family="Open Sans, Segoe UI, Arial, sans-serif", size=12, color="#2F3A45"),
+    paper_bgcolor="#FFFFFF", plot_bgcolor="#FFFFFF",
+    title=dict(font=dict(size=14, color="#2F3A45"), x=0.01),
     xaxis=_EJE, yaxis=_EJE,
-    margin=dict(l=45, r=20, t=55, b=45),
-    legend=dict(bgcolor="rgba(0,0,0,0)"),
+    margin=dict(l=45, r=15, t=50, b=40),
+    legend=dict(bgcolor="rgba(0,0,0,0)", font=dict(color="#45515D"), orientation="h",
+                yanchor="bottom", y=1.02, xanchor="left", x=0, title=dict(text="")),
+    hoverlabel=dict(bgcolor="#26323F", font=dict(color="#FFFFFF", family="Open Sans, sans-serif")),
 ))
 pio.templates.default = "autoeda"
-ESCALA_DIV = ["#F472B6", "#121A2B", "#2DD4BF"]
+ESCALA_DIV = ["#E4584C", "#F7F8FA", "#4E8CBA"]
+ESCALA_SEQ = ["#F2F6FA", "#73B0D7", "#31689B"]
+
+
+def _grupos(etiquetas):
+    """Etiquetas 'Grupo n' y su orden, para que Grupo 1 use siempre el primer color de la paleta."""
+    nombres = [f"Grupo {int(e) + 1}" for e in etiquetas]
+    return nombres, sorted(set(nombres), key=lambda g: int(g.split()[1]))
 
 
 def histogramas(df, tipos, max_cols=8):
@@ -70,12 +81,12 @@ def dispersiones(res, max_n=4):
     df, cl = res["df"], res["clusters"]
     color = None
     if cl is not None and len(cl["etiquetas"]) == len(df):
-        color = [f"Grupo {int(e) + 1}" for e in cl["etiquetas"]]
+        color, orden = _grupos(cl["etiquetas"])
     figs = []
     for p in _pares_dispersion(res, max_n):
         f = px.scatter(df, x=p["a"], y=p["b"], color=color, opacity=0.75,
                        title=f"{p['a']} vs {p['b']} (r={p['pearson']:.2f})",
-                       labels={"color": "Grupo"})
+                       labels={"color": "Grupo"}, category_orders={"color": orden} if color else None)
         figs.append(f)
     return figs
 
@@ -85,7 +96,7 @@ def pca_clusters(res):
     if not cl:
         return None
     return px.scatter(x=cl["pca"][:, 0], y=cl["pca"][:, 1], opacity=0.8,
-                      color=[f"Grupo {int(e) + 1}" for e in cl["etiquetas"]],
+                      color=_grupos(cl["etiquetas"])[0], category_orders={"color": _grupos(cl["etiquetas"])[1]},
                       labels={"x": "Componente 1", "y": "Componente 2", "color": "Grupo"},
                       title="Grupos detectados por K-means (proyección PCA)")
 
@@ -98,7 +109,7 @@ def silhouette_k(res):
     f = px.line(x=ks, y=[cl["scores_k"][k] for k in ks], markers=True,
                 labels={"x": "Número de grupos (k)", "y": "Silhouette"},
                 title="Selección de k por silhouette")
-    f.add_vline(x=cl["k"], line_dash="dash", line_color="#FBBF24")
+    f.add_vline(x=cl["k"], line_dash="dash", line_color="#FB8D34")
     return f
 
 
@@ -119,7 +130,7 @@ def asociacion_categorica(res, max_n=2):
     for r in sig:
         t = pd.crosstab(df[r["a"]], df[r["b"]], normalize="index") * 100
         t.index, t.columns = t.index.astype(str), t.columns.astype(str)
-        figs.append(px.imshow(t, text_auto=".0f", color_continuous_scale=["#121A2B", "#2DD4BF"], aspect="auto",
+        figs.append(px.imshow(t, text_auto=".0f", color_continuous_scale=ESCALA_SEQ, aspect="auto",
                               labels={"color": "% de la fila"},
                               title=f"{r['a']} vs {r['b']} (% por fila, V de Cramér={r['cramer_v']:.2f})"))
     return figs
